@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PDF Generator</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.0/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.0/dist/jspdf.umd.min.js"></script>
 </head>
 <body>
   <button id="generatePDF">Generate PDF</button>
@@ -19,7 +19,7 @@
 
     window.onload = function() {
       document.getElementById('generatePDF').addEventListener('click', () => {
-        const doc = new jsPDF();
+        const doc = new jsPDF.jsPDF();
 
         doc.text('Information:', 10, 10);
         doc.text(infoText, 10, 20);
