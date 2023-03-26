@@ -17,14 +17,16 @@
 
     const infoText = decodeURIComponent(getQueryParam('infoText'));
 
-    document.getElementById('generatePDF').addEventListener('click', () => {
-      const doc = new jsPDF();
+    window.onload = function() {
+      document.getElementById('generatePDF').addEventListener('click', () => {
+        const doc = new jsPDF();
 
-      doc.text('Information:', 10, 10);
-      doc.text(infoText, 10, 20);
+        doc.text('Information:', 10, 10);
+        doc.text(infoText, 10, 20);
 
-      doc.save('generatedDocument.pdf');
-    });
+        doc.save('generatedDocument.pdf');
+      });
+    };
   </script>
 </body>
 </html>
